@@ -1,6 +1,7 @@
-import UserModel from "../models/newUser";
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
+const UserModel = require("../models/newUser.js");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+
 
 // class UserController {
 //     static userRegistration = async (req, res) =>
@@ -23,6 +24,7 @@ const UserController = async (req, res) => {
             password: hashPassword,
           });
           await doc.save();
+          res.send({ status: "success", message: "You are Registered!!" });
         } catch (error) {
           res.send({ status: "failed", message: "unable to register" });
         }
@@ -37,3 +39,5 @@ const UserController = async (req, res) => {
     }
   }
 };
+
+export default UserController;

@@ -2,8 +2,8 @@ import dotenv from "dotenv";
 dotenv.config();
 import cors from "cors";
 import express from "express";
-
 import mongoose from "mongoose";
+import userRoutes from "./routes/userRoutes.js";
 // const mongoose = require("mongoose");
 
 mongoose
@@ -21,9 +21,7 @@ const port = process.env.PORT;
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Hello NodeJS");
-});
+app.use("/api/user", userRoutes);
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

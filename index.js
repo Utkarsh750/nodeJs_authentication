@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-// import dotenv from "dotenv";
 const dotenv = require("dotenv");
 const Products = require("./models/schema");
 const LoginUserCollection = require("./models/user");

@@ -25,3 +25,21 @@
 // app.listen(port, () => {
 //   console.log(`Server is running on port ${port}`);
 // });
+
+// const Searchbar = ({ searchBar }) => {
+//   const [query, setQuery] = useState();
+
+//   const handleQueryChange = useCallBack(
+//     (e) => {
+//       setQuery(e.target.value);
+//       searchBar(e.target.value);
+//     },
+//     [searchBar]
+//   );
+
+//   return (
+//     <>
+//       <input type="text" onClick={handleQueryChange} value={query} />
+//     </>
+//   );
+// };

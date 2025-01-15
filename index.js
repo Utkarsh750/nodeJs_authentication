@@ -127,7 +127,6 @@ app.post("/signup", async (req, res, next) => {
     name: req.body.username,
     password: req.body.password,
   };
-
   const isUserExist = await LoginUserCollection.findOne({ name: data.name });
 
   if (isUserExist) {
